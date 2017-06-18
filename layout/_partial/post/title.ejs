@@ -1,0 +1,34 @@
+<% if (post.link){ %>
+  <h1 itemprop="name">
+    <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
+  </h1>
+<% } else if (post.title){ %>
+  <% if (index){ %>
+    <h1 itemprop="name">
+      <a class="<%= class_name %>" href="<%- url_for(post.path) %>" <% if (theme.open_new_link) {%> target="_blank" <% } %> ><%= post.title %></a>
+    </h1>
+  <% } else { %>
+    <h1 class="post-title" itemprop="name">
+      <%= post.title %>
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          <% if (post.categories && post.categories.length){ %>
+              <li>
+                  <i class="fa fa-book"></i>
+                  <% post.categories.forEach(function (category) { %>
+                      <a href="<%= config.root %>categories/<%= category.name.replace(/\s+/g, '') %>/"><%- category.name %></a>
+                  <% }) %>
+              </li>
+          <% } %>
+        <li>
+          <i class="fa fa-calendar"></i>  <%= date(post.date)%>
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  <% } %>
+<% } %>

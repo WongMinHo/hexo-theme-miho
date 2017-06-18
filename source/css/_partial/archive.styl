@@ -1,0 +1,76 @@
+.archives-wrap
+  margin: block-margin 0
+
+.archives
+  clearfix()
+
+.archive-year-wrap
+  margin-bottom: 1em
+
+.archive-year
+  @extend $block-caption
+
+.archives
+  column-gap: 10px
+  @media mq-tablet
+    column-count: 2
+  @media mq-normal
+    column-count: 3
+
+.archive-article
+  avoid-column-break()
+
+.archive-article-inner
+  @extend $block
+  padding: 10px
+  margin-bottom: 15px
+.archive-article-header h1
+  @extend $ellipsis
+.archive-article-title
+  text-decoration: none
+  color: color-default
+  transition: color 0.2s
+  line-height: line-height
+  @extend $ellipsis
+  &:hover
+    color: main-color
+
+.archive-article-footer
+  margin-top: 1em
+
+.archive-article-date
+  color: color-grey
+  text-decoration: none
+  font-size: 0.85em
+  line-height: 1em
+  margin-bottom: 0.5em
+  display: block
+
+#page-nav
+  clearfix()
+  margin: block-margin auto
+  border-radius: 3px
+  text-align: center
+  color: #727272
+  overflow: hidden
+  a, span
+    padding: 10px 15px
+    line-height: 1
+    height: 2ex
+    margin-right: 5px
+  a
+    color: color-grey
+    text-decoration: none
+    &:hover
+      color: #fff
+      background: main-color
+  .page-number
+    display: inline-block
+    @media mq-mobile
+      display: none
+  .current
+    font-weight: bold
+    color: #fff
+    background: main-color
+  .space
+    color: color-border

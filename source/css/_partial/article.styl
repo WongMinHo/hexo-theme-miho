@@ -1,0 +1,431 @@
+.body-wrap
+  margin-bottom: block-margin
+.article
+  margin: block-margin 0
+  background: #fff
+  border-radius: 0
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+
+.article-inner
+  @extend $block
+  overflow: inherit
+
+.article-date
+  @extend $block-caption
+  float: left
+
+.article-category
+  float: left
+  line-height: 1em
+  color: #ccc
+  text-shadow: 0 1px #fff
+  margin-left: 8px
+  &:before
+    content: "\2022"
+
+.article-category-link
+  @extend $block-caption
+  margin: 0 12px 1em
+
+.article-header
+  padding: article-padding
+  position: relative
+
+.article-title
+  display: block
+  padding: 7px 80px 7px 15px
+  border-left: 4px solid #0cc
+  text-decoration: none
+  font-size: 1.3em
+  color: color-default
+  line-height: line-height-title
+  transition: color 0.2s
+  @extend $ellipsis
+  &:hover
+    color: main-color
+
+.article-header .header-cate
+  background: main-color
+  position: absolute
+  display: inline-block
+  padding: 8px
+  text-align: center
+  color: #fff
+  top: 16px
+  right: -10px
+  box-shadow: 0 1px 2px rgba(0,0,0,.3)
+  a
+    text-decoration: none
+    color: #fff
+  &:after
+    position: absolute
+    content: ""
+    top: 30px
+    right: 0
+    border-bottom: 10px solid transparent
+    border-left: 10px solid #099
+
+.article-entry
+  @extend $base-style
+  clearfix()
+  position: relative
+  padding: 15px
+  background: #f9f9f9
+  border-top: 1px solid #e8e8e8
+  border-bottom: 1px solid #e8e8e8
+  color: color-default
+  p, table
+    line-height: line-height
+    margin: line-height 0
+  h1, h2, h3, h4, h5, h6
+    font-weight: bold
+  h1, h2, h3, h4, h5, h6
+    line-height: line-height-title
+    margin: line-height-title 0
+  a
+    color: color-link
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  ol, dl
+    margin-top: line-height
+    margin-bottom: line-height
+  img, video
+    max-width: 100%
+    height: auto
+    display: block
+    margin: auto
+  iframe
+    border: none
+  table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+  th
+    font-weight: bold
+    border-bottom: 3px solid color-border
+    padding-bottom: 0.5em
+  td
+    border-bottom: 1px solid color-border
+    padding: 10px 0
+  blockquote
+    font-family: font-serif
+    font-size: 1.4em
+    margin: line-height 20px
+    text-align: center
+    footer
+      font-size: font-size
+      margin: line-height 0
+      font-family: font-sans
+      cite
+        &:before
+          content: "—"
+          padding: 0 0.5em
+  .pullquote
+    text-align: left
+    width: 45%
+    margin: 0
+    &.left
+      margin-left: 0.5em
+      margin-right: 1em
+    &.right
+      margin-right: 0.5em
+      margin-left: 1em
+  .caption
+    color: color-grey
+    display: block
+    font-size: 0.9em
+    margin-top: 0.5em
+    position: relative
+    text-align: center
+  .video-container
+    position: relative
+    padding-top: (9 / 16 * 100)% // 16:9 ratio
+    height: 0
+    overflow: hidden
+    iframe, object, embed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      margin-top: 0
+  .article-img
+    float: left
+    width: 300px
+    height: 150px
+    overflow: hidden
+    a
+      cursor: pointer
+    img
+      width: 100%
+      height: 150px
+      transition: 0.5s all
+      -moz-transition: 0.5s all
+      -webkit-transition: 0.5s all
+      -o-transition: 0.5s all
+      &:hover
+        transform: scale(1.5)
+        -ms-transform: scale(1.5)
+        -moz-transform: scale(1.5)
+        -webkit-transform: scale(1.5)
+        -o-transform: scale(1.5)
+  .article-feed
+    margin-left: 320px
+  .article-tags
+    position: absolute
+    left: 315px
+    bottom: 15px
+    ul a
+      text-decoration: none
+      display: inline-block
+      margin-right: 5px
+      padding: 0 5px
+      border: 1px solid main-color
+      font-size: 12px
+      color: main-color
+      cursor: pointer
+      &:hover
+        background: main-color
+        color: #fff
+
+.article-more-link
+  float: right
+  padding: 8px 20px
+  border: 0
+  border-radius: 0
+  background: main-color
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06), 0 3px 10px rgba(0,0,0,0.13)
+  transition: all .1s
+  display: inline-block
+  line-height: 1em
+  cursor: pointer
+  color: #fff!important
+  &:hover
+    opacity: .8
+    box-shadow: 0 4px 10px rgba(0,0,0,0.09), 0 4px 10px rgba(0,0,0,0.17)
+    text-shadow: 0 1px darken(color-link, 20%)
+
+.article-footer
+  clearfix()
+  font-size: 1em
+  line-height: line-height
+  padding: article-padding
+  a
+    color: color-grey
+    text-decoration: none
+    &:hover
+      color: color-default
+  .article-footer-menu
+    float: left
+    margin-top: 3px
+    height: 25px
+    line-height: 25px
+    li
+      display: inline-block
+      margin-right: 20px
+      color: #999
+      i
+        margin-right: 5px
+    .article-footer-tags
+      @extend $tags-style
+      display: inline-block
+      a
+        color: #fff
+        display: inline-block
+        text-decoration: none
+        font-weight: normal
+        height: 18px
+        line-height: 18px
+        padding: 0 5px 0 10px
+        position: relative
+        border-radius: 0 5px 5px 0
+        margin: 5px 10px 5px 8px
+        &:hover
+          opacity: 0.8
+        &:before
+          content: " "
+          width: 0px
+          height: 0px
+          position: absolute
+          top: 0
+          left: -18px
+          border: 9px solid transparent
+        &:after
+          content: " "
+          width: 4px
+          height: 4px
+          background-color:#fff
+          border-radius: 4px
+          box-shadow: 0px 0px 0px 1px rgba(0,0,0,.3)
+          position: absolute
+          top: 7px
+          left: 2px
+.article-tag-list-item
+  float: left
+  margin-right: 10px
+
+.article-tag-list-link
+  &:before
+    content: "#"
+
+.article-comment-link
+  float: right
+  &:before
+    content: "\f075"
+    font-family: font-icon
+    padding-right: 8px
+
+.article-share-link
+  cursor: pointer
+  float: right
+  margin-left: 20px
+  &:before
+    content: "\f064"
+    font-family: font-icon
+    padding-right: 6px
+
+#article-nav
+  clearfix()
+  position: relative
+  @media mq-normal
+    margin: block-margin 0
+    font-size: @extend $base-style h4
+
+.article-nav-link-wrap
+  text-decoration: none
+  text-shadow: 0 1px #fff
+  color: color-default
+  box-sizing: border-box
+  margin-top: block-margin
+  text-align: center
+  display: block
+  @extend $base-style h4
+  &:hover
+    color: main-color
+  @media mq-normal
+    margin-top: 0
+
+#article-nav-newer
+  @media mq-normal
+    float: left
+    text-align: left
+    padding-right: 20px
+    width: 50%
+
+#article-nav-older
+  @media mq-normal
+    float: right
+    text-align: right
+    padding-left: 20px
+    width: 50%
+
+.article-nav-caption
+  text-transform: uppercase
+  letter-spacing: 2px
+  color: color-border
+  line-height: 1em
+  font-weight: bold
+  #article-nav-newer &
+    margin-right: -2px
+
+.article-nav-title
+  display: inline-block
+  width: 90%
+.article-share-box
+  position: absolute
+  display: none
+  background: #fff
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
+  border-radius: 3px
+  margin-left: -145px
+  overflow: hidden
+  z-index: 1
+  &.on
+    display: block
+
+.article-share-input
+  width: 100%
+  background: none
+  box-sizing: border-box
+  font: 14px font-sans
+  padding: 0 15px
+  color: color-default
+  outline: none
+  border: 1px solid color-border
+  border-radius: 3px 3px 0 0
+  height: 36px
+  line-height: 36px
+
+.article-share-links
+  clearfix()
+  background: color-background
+
+$article-share-link
+  width: 50px
+  height: 36px
+  display: block
+  float: left
+  position: relative
+  color: #999
+  text-shadow: 0 1px #fff
+  &:before
+    font-size: 20px
+    font-family: font-icon
+    absolute-center(@font-size)
+    text-align: center
+  &:hover
+    color: #fff
+
+.article-share-twitter
+  @extend $article-share-link
+  &:before
+    content: "\f099"
+  &:hover
+    background: color-twitter
+    text-shadow: 0 1px darken(color-twitter, 20%)
+
+.article-share-facebook
+  @extend $article-share-link
+  &:before
+    content: "\f09a"
+  &:hover
+    background: color-facebook
+    text-shadow: 0 1px darken(color-facebook, 20%)
+
+.article-share-pinterest
+  @extend $article-share-link
+  &:before
+    content: "\f0d2"
+  &:hover
+    background: color-pinterest
+    text-shadow: 0 1px darken(color-pinterest, 20%)
+
+.article-share-google
+  @extend $article-share-link
+  &:before
+    content: "\f0d5"
+  &:hover
+    background: color-google
+    text-shadow: 0 1px darken(color-google, 20%)
+
+.article-gallery
+  background: #000
+  position: relative
+
+.article-gallery-photos
+  position: relative
+  overflow: hidden
+
+.article-gallery-img
+  display: none
+  max-width: 100%
+  &:first-child
+    display: block
+  &.loaded
+    position: absolute
+    display: block
+  img
+    display: block
+    max-width: 100%
+    margin: 0 auto

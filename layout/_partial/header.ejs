@@ -1,0 +1,28 @@
+<header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-row">
+            <div id="logo">
+                <a href="<%- url_for() %>">
+                    <img src="<%= url_for(theme.logo) %>" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+            <div id="header-title">
+                <% if (theme.header_title){ %>
+                <h2>
+                    <%= theme.header_title %>
+                </h2>
+                <% } %>
+            </div>
+            <div id="header-description">
+                <% if (theme.header_description){ %>
+                <h3>
+                    <%= theme.header_description %>
+                </h3>
+                <% } %>
+            </div>
+            </div>
+        </div>
+    </div>
+</header>

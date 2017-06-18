@@ -1,0 +1,76 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+          <% if (index && post.categories && post.categories.length){ %>
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  <% post.categories.forEach(function (category) { %>
+                  <a href="<%= config.root %>categories/<%= category.name.replace(/\s+/g, '') %>/"><%- category.name %></a>
+                  <% }) %>
+              </span>
+          <% } %>
+      </header>
+    <% } %>
+    <div class="article-entry <% if (is_post()) { %>post-content<% } %>" itemprop="articleBody">
+      <% if (index && site.posts.length > 1) { %>
+        <div class="article-img">
+            <a>
+                <% if (post.cover_picture) { %>
+                <img src="<%- post.cover_picture %>" alt="<%- post.title %>" title="<%- post.title %>">
+                <% } else { %>
+                <img src="<%- theme.cover_picture %>" alt="<%- post.title %>" title="<%- post.title %>">
+                <% } %>
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                <%- post.excerpt ? strip_html(post.excerpt) : truncate(strip_html(post.content), {
+                    length: theme.excerpt_length
+                }) %>
+            </p>
+        </div>
+      <% } else { %>
+            <%- post.content %>
+      <% } %>
+    </div>
+    <footer class="article-footer">
+        <ul class="article-footer-menu">
+            <% if (index) { %>
+                <li><i class="fa fa-calendar"></i><%= date(post.date) %></li>
+            <% } %>
+            <% if (post.tags.length) { %>
+            <li class="article-footer-tags">
+                <i class="fa fa-tags"></i>
+                <% post.tags.forEach(function (tag) { %>
+                    <a href="<%= config.root %>tags/<%= tag.name.replace(/\s+/g, '') %>/" class="color<%= tag.name.length % 5 + 1 %>"><%- tag.name %></a>
+                <% }) %>
+            </li>
+            <% } %>
+        </ul>
+        <% if (index) { %>
+            <a href="<%- url_for(post.path) %>#more" class="article-more-link" <% if (theme.open_new_link) {%> target="_blank" <% } %>><%= theme.excerpt_link %></a>
+        <% } %>
+    </footer>
+  </div>
+</article>
+<% if (!index){ %>
+<%- partial('post/nav') %>
+<% } %>
+<% if (!index && post.comments){ %>
+    <% if (theme.wangyiyun){ %>
+        <%- partial('plugins/comments/wangyiyun', {
+            key: post.slug,
+            title: post.title,
+            url: config.url+url_for(post.path)
+        }) %>
+    <% } else if (config.disqus_shortname) { %>
+        <section id="comments">
+            <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </section>
+    <% } %>
+<% } %>
