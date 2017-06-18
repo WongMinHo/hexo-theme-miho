@@ -1,7 +1,7 @@
 hexo-theme-miho
 ================
 
-miho 一款单栏响应式的[Hexo](https://hexo.io)主题。
+miho 是一款单栏响应式的[Hexo](https://hexo.io)主题。
 基于 Hexo 3.0+ 制作，兼容移动端浏览。 点击 [我的博客](http://blog.minhow.com/) 查看效果。
 
 ## 安装
