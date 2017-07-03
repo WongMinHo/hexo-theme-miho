@@ -1,36 +1,38 @@
 hexo-theme-miho
 ================
 
-miho 是一款单栏响应式的[Hexo](https://hexo.io)主题。
-基于 Hexo 3.0+ 制作，兼容移动端浏览。 点击 [我的博客](http://blog.minhow.com/) 查看效果。
+MiHo is a single and responsive design theme for [Hexo](https://hexo.io).
+MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[MinHow's Blog](http://blog.minhow.com/).
+中文文档请[查看](https://hexo.io).
 
-## 安装
+## Installation
 
-### 安装主题
+### Installation Theme
 ``` bash
 $ git clone https://github.com/WongMinHo/hexo-theme-miho.git themes/miho
 ```
 
-### 更新
+### Update
 ``` bash
 cd themes/miho
 git pull
 ```
 
-### 依赖安装
+### Dependency installation
 #### Json-content
-生成站点文章静态数据，用于站内搜索；详细的配置请查看[hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content)
+Generate site articles static data for in-site search; detailed configuration please check[hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content).
 ``` bash
 npm install hexo-generator-json-content --save
 ```
 
-### 配置主题
+### Theme Config
+Change theme field in Hexo root's _config.yml file.
+``` bash
+theme: miho
+```
 
-修改hexo根目录下的 `_config.yml` ： `theme: miho`
-
-## 配置
-
-配置文件`_config.yml`在主题的根目录下的，请根据自己需要修改使用。
+## Configuration
+Modify settings in `themes/miho/_config.yml`，Please use it as needed.
 
 ```
 # Favicon of your site | 网站icon
@@ -51,7 +53,6 @@ banner_img: images/banner.jpg
 
 # Content
 
-# Article excerpt | 文章摘录
 # Excerpt length | 摘录长度
 excerpt_length: 200
 # Excerpt link | 摘录链接
@@ -75,7 +76,7 @@ wangyiyun: false
 cnzz_analytics: false
 # 百度分析，输入key值
 baidu_analytics: false
-# google分析
+# google analytics| google分析
 google_analytics: false
 
 # Footer
@@ -90,7 +91,7 @@ access_counter:
 copyright: 2017 MinHow
 ```
 
-### 文章配置举例
+### Article configuration example
 ``` bash
 ---
 title: Hello World
@@ -100,7 +101,7 @@ tags:
     - First
     - Second
 ---
-MinHow-这是摘要
+MinHow-This is a summary
 <!-- more -->
 cover_picture: /images/banner.jpg
 ---

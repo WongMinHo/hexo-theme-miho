@@ -19,7 +19,6 @@ banner_img: images/banner.jpg
 
 # Content
 
-# Article excerpt | 文章摘录
 # Excerpt length | 摘录长度
 excerpt_length: 200
 # Excerpt link | 摘录链接
@@ -43,7 +42,7 @@ wangyiyun: false
 cnzz_analytics: false
 # 百度分析，输入key值
 baidu_analytics: false
-# google分析
+# google analytics | google分析
 google_analytics: false
 
 # Footer
