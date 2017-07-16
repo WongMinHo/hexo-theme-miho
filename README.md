@@ -1,9 +1,9 @@
 hexo-theme-miho
 ================
 
-MiHo is a single and responsive design theme for [Hexo](https://hexo.io).
-MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[MinHow's Blog](http://blog.minhow.com/).
-中文文档请[查看](https://hexo.io).
+MiHo is a single and responsive design theme for [Hexo](//hexo.io).
+MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[MinHow's Blog](//blog.minhow.com/).
+中文文档请[查看](//blog.minhow.com/2017/06/25/blog/installation-configuration/).
 
 ## Installation
 
@@ -20,13 +20,13 @@ git pull
 
 ### Dependency installation
 #### Json-content
-Generate site articles static data for in-site search; detailed configuration please check[hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content).
+Generate site articles static data for in-site search; detailed configuration please check [hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content).
 ``` bash
 npm install hexo-generator-json-content --save
 ```
 
 ### Theme Config
-Change theme field in Hexo root's _config.yml file.
+Change theme field in Hexo root's `_config.yml` file.
 ``` bash
 theme: miho
 ```
