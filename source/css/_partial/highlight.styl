@@ -32,9 +32,15 @@ $line-numbers
     font-family: font-mono
     font-size: 1em
   code
-    background: color-background
-    text-shadow: 0 1px #fff
-    padding: 0 0.3em
+    color: #c7254e
+    line-height: 1
+    margin: 0 4px
+    font-size: 85%
+    padding: 2px 4px
+    border: 1px solid #eee
+    border-radius: 2px
+    word-wrap: break-word
+    background-color: #f9f2f4
   .code
     font: 14px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace
   pre
@@ -52,9 +58,17 @@ $line-numbers
     table
       margin: 0
       width: auto
+      border-collapse: collapse
+      border-spacing: 0
+      border: none
+    th
+      font-weight: bold
+      border-bottom: 3px solid color-border
+      padding-bottom: 0.5em
     td
       border: none
       padding: 0
+      text-align: left
     figcaption
       clearfix()
       font-size: 0.85em
