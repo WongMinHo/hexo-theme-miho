@@ -1,6 +1,5 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <div class="article-inner">
-    <%- partial('post/gallery') %>
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
@@ -33,6 +32,7 @@
             </p>
         </div>
       <% } else { %>
+            <%- partial('post/gallery') %>
             <%- post.content %>
       <% } %>
     </div>
