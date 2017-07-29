@@ -1,3 +1,4 @@
+![MiHo](http://oerolc7og.bkt.clouddn.com/images/miho/theme/github.jpg)
 hexo-theme-miho
 ================
 
@@ -41,7 +42,7 @@ favicon: /favicon.ico
 # Header
 
 # Keywords of your site | 网站关键字
-keywords: MinHow,blog
+keywords: MinHow,MinHow-个人博客
 # Head headline | 头部标题
 header_title: MinHow-个人博客
 # Head description | 头部描述
@@ -54,7 +55,7 @@ banner_img: images/banner.jpg
 # Content
 
 # Excerpt length | 摘录长度
-excerpt_length: 200
+excerpt_length: 190
 # Excerpt link | 摘录链接
 excerpt_link: more>>
 # New window open link | 新窗口打开文章
