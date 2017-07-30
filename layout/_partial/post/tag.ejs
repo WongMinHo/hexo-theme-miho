@@ -1,6 +1,8 @@
 <% if (post.tags && post.tags.length){ %>
-  <%- list_tags(post.tags, {
-    show_count: false,
-    class: 'article-tag'
-  }) %>
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      <% post.tags.forEach(function (tag) { %>
+    <a href="<%= config.root %>tags/<%= tag.name.replace(/\s+/g, '') %>/" class="color<%= tag.name.length % 5 + 1 %>"><%- tag.name %></a>
+      <% }) %>
+  </li>
 <% } %>

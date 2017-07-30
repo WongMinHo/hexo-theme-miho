@@ -244,40 +244,41 @@
       color: #999
       i
         margin-right: 5px
-    .article-footer-tags
-      @extend $tags-style
-      display: inline-block
-      a
-        color: #fff
-        display: inline-block
-        text-decoration: none
-        font-weight: normal
-        height: 18px
-        line-height: 18px
-        padding: 0 5px 0 10px
-        position: relative
-        border-radius: 0 5px 5px 0
-        margin: 5px 10px 5px 8px
-        &:hover
-          opacity: 0.8
-        &:before
-          content: " "
-          width: 0px
-          height: 0px
-          position: absolute
-          top: 0
-          left: -18px
-          border: 9px solid transparent
-        &:after
-          content: " "
-          width: 4px
-          height: 4px
-          background-color:#fff
-          border-radius: 4px
-          box-shadow: 0px 0px 0px 1px rgba(0,0,0,.3)
-          position: absolute
-          top: 7px
-          left: 2px
+.article-footer-tags
+  @extend $tags-style
+  display: inline-block
+  a
+    color: #fff
+    display: inline-block
+    text-decoration: none
+    font-weight: normal
+    height: 18px
+    line-height: 18px
+    padding: 0 5px 0 10px
+    position: relative
+    border-radius: 0 5px 5px 0
+    margin: 5px 10px 5px 8px
+    &:hover
+      opacity: 0.8
+      color: #fff
+    &:before
+      content: " "
+      width: 0px
+      height: 0px
+      position: absolute
+      top: 0
+      left: -18px
+      border: 9px solid transparent
+    &:after
+      content: " "
+      width: 4px
+      height: 4px
+      background-color:#fff
+      border-radius: 4px
+      box-shadow: 0px 0px 0px 1px rgba(0,0,0,.3)
+      position: absolute
+      top: 7px
+      left: 2px
 .article-tag-list-item
   float: left
   margin-right: 10px

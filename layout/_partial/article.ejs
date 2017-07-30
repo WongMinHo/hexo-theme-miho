@@ -41,14 +41,7 @@
             <% if (index) { %>
                 <li><i class="fa fa-calendar"></i><%= date(post.date) %></li>
             <% } %>
-            <% if (post.tags.length) { %>
-            <li class="article-footer-tags">
-                <i class="fa fa-tags"></i>
-                <% post.tags.forEach(function (tag) { %>
-                    <a href="<%= config.root %>tags/<%= tag.name.replace(/\s+/g, '') %>/" class="color<%= tag.name.length % 5 + 1 %>"><%- tag.name %></a>
-                <% }) %>
-            </li>
-            <% } %>
+            <%- partial('post/tag') %>
         </ul>
         <% if (index) { %>
             <a href="<%- url_for(post.path) %>#more" class="article-more-link" <% if (theme.open_new_link) {%> target="_blank" <% } %>><%= theme.excerpt_link %></a>

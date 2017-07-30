@@ -15,11 +15,9 @@
   @media mq-tablet
     column-count: 2
   @media mq-normal
-    column-count: 3
-
+    column-count: 2
 .archive-article
   avoid-column-break()
-
 .archive-article-inner
   @extend $block
   padding: 10px
@@ -31,6 +29,7 @@
   color: color-default
   transition: color 0.2s
   line-height: line-height
+  font-size: 18px
   @extend $ellipsis
   &:hover
     color: main-color
@@ -41,11 +40,14 @@
 .archive-article-date
   color: color-grey
   text-decoration: none
-  font-size: 0.85em
+  font-size: 1em
   line-height: 1em
   margin-bottom: 0.5em
   display: block
-
+.archive-post-footer
+  margin: 5px -10px 0 -10px
+  padding: 5px 10px 0 10px
+  border-top: 1px solid #e8e8e8
 #page-nav
   clearfix()
   margin: block-margin auto
