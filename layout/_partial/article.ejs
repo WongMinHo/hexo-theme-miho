@@ -53,8 +53,8 @@
 <%- partial('post/nav') %>
 <% } %>
 <% if (!index && post.comments){ %>
-    <% if (theme.wangyiyun){ %>
-        <%- partial('plugins/comments/wangyiyun', {
+    <% if (theme.changyan_appid && theme.changyan_conf){ %>
+        <%- partial('plugins/comments/changyan', {
             key: post.slug,
             title: post.title,
             url: config.url+url_for(post.path)

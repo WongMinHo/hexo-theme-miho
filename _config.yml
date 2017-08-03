@@ -7,9 +7,9 @@ favicon: /favicon.ico
 # Header
 
 # Keywords of your site | 网站关键字
-keywords: MinHow,MinHow-个人博客
+keywords: MinHow,MinHow's Blog
 # Head headline | 头部标题
-header_title: MinHow-个人博客
+header_title: MinHow's Blog
 # Head description | 头部描述
 header_description: 一个专注 WEB 开发的技术博客
 # Link to your logo | logo地址
@@ -34,8 +34,11 @@ open_bg_particle: true
 style:
   # Main color tone | 主色调
   main_color: '#0cc'
-# 网易云跟帖
+# 网易云跟帖，已停止服务
 wangyiyun: false
+# 畅言
+changyan_appid: false
+changyan_conf: false
 
 # Analytics | 分析
 # 站长分析，输入站点id
