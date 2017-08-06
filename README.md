@@ -140,7 +140,7 @@ open_bg_particle: true
 Google analytics, Baidu analytics and cnzz analytics are supported.
 ``` bash
 # 站长分析，输入站点id
-cnzz_analytics: 1262227863
+cnzz_analytics: false
 # 百度分析，输入key值
 baidu_analytics: false
 # google analytics | google分析
