@@ -15,7 +15,7 @@ MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[M
 * [License](#license)
 
 ## General
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg?style=flat-square)]()
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg?style=flat-square)](#)
 [![Author](https://img.shields.io/badge/author-MinHow-blue.svg?style=flat-square)](https://minhow.com)
 
 [![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
