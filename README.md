@@ -4,7 +4,33 @@ hexo-theme-miho
 
 MiHo is a single and responsive design theme for [Hexo](//hexo.io).
 MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[MinHow's Blog](http://blog.minhow.com/).
-中文文档请[查看](http://blog.minhow.com/2017/06/25/blog/installation-configuration/).
+中文文档请[查看](http://blog.minhow.com/2017/08/01/blog/installation-configuration/).
+
+## Summary
+* [General](#General)
+* [Features](#Features)
+* [Installation](#Installation)
+* [Configuration](#Configuration)
+* [Contributing](#Contributing)
+* [License](#License)
+
+## General
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg?style=flat-square)]()
+[![Author](https://img.shields.io/badge/author-MinHow-blue.svg?style=flat-square)](https://minhow.com)
+
+[![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
+[![node.js](https://img.shields.io/badge/node.js-6.0+-green.svg?style=flat-square)](https://nodejs.org/)
+
+## Features
+* Responsive
+* Concise
+* Tags Support & Categories Support
+* Googe analytics & Baidu analytics & Cnzz analytics
+* Disqus comments & Changyan comments
+* Stylus CSS preprocessor
+* Local Site Search
+* Pagination
+* ejs HTML templates
 
 ## Installation
 
@@ -60,7 +86,7 @@ excerpt_length: 190
 excerpt_link: more>>
 # New window open link | 新窗口打开文章
 open_new_link: false
-# Article default cover picture | 文章默认封面图
+# Article default cover picture，size：350*150 | 文章默认封面图，尺寸：350*150
 cover_picture: images/banner.jpg
 # Open background particles | 开启背景粒子
 open_bg_particle: true
@@ -69,11 +95,14 @@ open_bg_particle: true
 style:
   # Main color tone | 主色调
   main_color: '#0cc'
-# 网易云跟帖，已停止服务
-wangyiyun: false
+
+# Comments | 评论
+
 # 畅言
 changyan_appid: false
 changyan_conf: false
+# disqus
+disqus: false
 
 # Analytics | 分析
 # 站长分析，输入站点id
@@ -95,6 +124,39 @@ access_counter:
 copyright: 2017 MinHow
 ```
 
+#### Article cover picture
+Article default cover picture，size：350*150, When the article configuration does not have cover_picture display.
+``` bash
+cover_picture: images/banner.jpg
+```
+
+#### Background particles
+Whether to open background particles.
+``` bash
+open_bg_particle: true
+```
+
+#### Analytics
+Google analytics, Baidu analytics and cnzz analytics are supported.
+``` bash
+# 站长分析，输入站点id
+cnzz_analytics: 1262227863
+# 百度分析，输入key值
+baidu_analytics: false
+# google analytics | google分析
+google_analytics: false
+```
+
+#### Comments
+This theme support both Disqus and Changyan as the third party discussion system.
+``` bash
+# 畅言
+changyan_appid: false
+changyan_conf: false
+# disqus
+disqus: false
+```
+
 ### Article configuration example
 ``` bash
 ---
@@ -110,5 +172,12 @@ MinHow-This is a summary
 cover_picture: /images/banner.jpg
 ---
 ```
+
+## Contributing
+All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
+
+## License
+[![license](https://img.shields.io/github/license/viosey/hexo-theme-material.svg?style=flat-square)](https://github.com/viosey/hexo-theme-material/blob/master/LICENSE
+Open sourced under the GPL v3.0 license.
 
 

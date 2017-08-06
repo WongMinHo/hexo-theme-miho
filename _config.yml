@@ -34,15 +34,18 @@ open_bg_particle: true
 style:
   # Main color tone | 主色调
   main_color: '#0cc'
-# 网易云跟帖，已停止服务
-wangyiyun: false
+
+# Comments | 评论
+
 # 畅言
 changyan_appid: false
 changyan_conf: false
+# disqus
+disqus: false
 
 # Analytics | 分析
 # 站长分析，输入站点id
-cnzz_analytics: false
+cnzz_analytics: 1262227863
 # 百度分析，输入key值
 baidu_analytics: false
 # google analytics | google分析
