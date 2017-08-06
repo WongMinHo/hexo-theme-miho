@@ -177,7 +177,6 @@ cover_picture: /images/banner.jpg
 All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
 
 ## License
-[![license](https://img.shields.io/github/license/WongMinHo/hexo-theme-miho.svg?style=flat-square)]
 Open sourced under the GPL v3.0 license.
 
 
