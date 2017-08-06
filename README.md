@@ -7,12 +7,12 @@ MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[M
 中文文档请[查看](http://blog.minhow.com/2017/08/01/blog/installation-configuration/).
 
 ## Summary
-* [General](#General)
-* [Features](#Features)
-* [Installation](#Installation)
-* [Configuration](#Configuration)
-* [Contributing](#Contributing)
-* [License](#License)
+* [General](#general)
+* [Features](#features)
+* [Installation](#installation)
+* [Configuration](#configuration)
+* [Contributing](#contributing)
+* [License](#license)
 
 ## General
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg?style=flat-square)]()
@@ -177,7 +177,7 @@ cover_picture: /images/banner.jpg
 All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
 
 ## License
-[![license](https://img.shields.io/github/license/viosey/hexo-theme-material.svg?style=flat-square)](https://github.com/viosey/hexo-theme-material/blob/master/LICENSE
+[![license](https://img.shields.io/github/license/WongMinHo/hexo-theme-miho.svg?style=flat-square)]
 Open sourced under the GPL v3.0 license.
 
 
