@@ -8,21 +8,28 @@
                 </a>
             </div>
             <div class="header-info">
-            <div id="header-title">
-                <% if (theme.header_title){ %>
-                <h2>
-                    <%= theme.header_title %>
-                </h2>
-                <% } %>
+                <div id="header-title">
+                    <% if (theme.header_title){ %>
+                    <h2>
+                        <%= theme.header_title %>
+                    </h2>
+                    <% } %>
+                </div>
+                <div id="header-description">
+                    <% if (theme.header_description){ %>
+                    <h3>
+                        <%= theme.header_description %>
+                    </h3>
+                    <% } %>
+                </div>
             </div>
-            <div id="header-description">
-                <% if (theme.header_description){ %>
-                <h3>
-                    <%= theme.header_description %>
-                </h3>
-                <% } %>
-            </div>
-            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    <% for (var i in theme.header_nav){ %>
+                        <a class="<%= i %>" target="_blank" href="<%- url_for(theme.header_nav[i]) %>" title="<%= i %>"><i class="fa fa-<%= i %> fa-2x"></i></a>
+                    <%}%>
+                </div>
+            </nav>
         </div>
     </div>
 </header>

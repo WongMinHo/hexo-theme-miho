@@ -2,17 +2,21 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script>
   var mihoConfig = {
-      root: "<%=config.url%>"
+      root: "<%=config.url%>",
+      animate: <%=theme.open_animation%>,
+      isHome: <%=is_home()%>
   }
 </script>
 <%- partial('_partial/sidebar') %>
 <%- js('js/search') %>
 <%- js('js/sidebar-menu-box') %>
+
 <% if (theme.open_bg_particle){ %>
-  <script src="http://cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
   <div id="particles"></div>
   <%- js('js/particles') %>
 <% } %>
+
 <% if (config.disqus_shortname){ %>
 <script>
   var disqus_shortname = '<%= config.disqus_shortname %>';
@@ -32,4 +36,10 @@
 <% if (theme.fancybox){ %>
   <%- css('fancybox/jquery.fancybox') %>
   <%- js('fancybox/jquery.fancybox.pack') %>
+<% } %>
+
+<% if (theme.open_animation){ %>
+  <%- css('//cdn.bootcss.com/animate.css/3.5.0/animate.min.css') %>
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <%- js('js/animate') %>
 <% } %>
