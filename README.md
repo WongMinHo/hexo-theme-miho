@@ -62,6 +62,9 @@ theme: miho
 Modify settings in `themes/miho/_config.yml`，Please use it as needed.
 
 ```
+# hexo-theme-miho
+# https://github.com/wongminho/hexo-theme-miho
+
 # Favicon of your site | 网站icon
 favicon: /favicon.ico
 
@@ -77,6 +80,20 @@ header_description: 一个专注 WEB 开发的技术博客
 logo: images/logo.png
 # Link to your banner_img | 首页banner图地址
 banner_img: images/banner.jpg
+# Head navigation, use to display social information | 头部导航，用来展示社交信息
+header_nav:
+  home: "//minhow.com"
+  github: "//github.com/wongminho"
+  weibo: "//weibo.com/WongMinHo"
+  twitter: "//twitter.com/huangminhow"
+  #qq: "#"
+  #weixin: "#"
+  #snapchat: "#"
+  #telegram: "#"
+  #mail: "#"
+  #facebook: "#"
+  #google: "#"
+  #linkedin: "#"
 
 # Content
 
@@ -90,6 +107,8 @@ open_new_link: false
 cover_picture: images/banner.jpg
 # Open background particles | 开启背景粒子
 open_bg_particle: true
+# Open animation in homepage and head | 开启主页及头部动画
+open_animation: true
 
 # Style customization | 样式定制
 style:
@@ -109,7 +128,7 @@ disqus: false
 cnzz_analytics: false
 # 百度分析，输入key值
 baidu_analytics: false
-# google analytics| google分析
+# google analytics | google分析
 google_analytics: false
 
 # Footer
@@ -134,6 +153,12 @@ cover_picture: images/banner.jpg
 Whether to open background particles.
 ``` bash
 open_bg_particle: true
+```
+
+#### Homepage and head animation
+Whether to open homepage and head animation.
+``` bash
+open_animation: true
 ```
 
 #### Analytics
