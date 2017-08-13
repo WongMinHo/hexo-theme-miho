@@ -74,12 +74,21 @@ $header-text
   @extend $header-text
   width: 600px
   margin: 20px auto
-  padding: 15px 0
+  padding: 10px 0
   color: #666
   letter-spacing: 5px
   h3
     @extend $base-style h3
-
+.header-nav
+  cursor: pointer
+  margin: 8px 0
+  .social
+    text-align: center
+    a
+      color: #696969
+      margin-right: 15px
+      &:hover
+        color: main-color
 #subtitle-wrap
   margin-top: subtitle-size
 
