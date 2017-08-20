@@ -17,19 +17,35 @@ logo: images/logo.png
 # Link to your banner_img | 首页banner图地址
 banner_img: images/banner.jpg
 # Head navigation, use to display social information | 头部导航，用来展示社交信息
+#  name:                  Font Awesome icon | Font Awesome 图标
+#    title: Home          Icon title | 图标标题
+#    url: //minhow.com    Url, absolute or relative path | 链接，绝对或相对路径
+#    target: true         Whether to jump out | 是否跳出
 header_nav:
-  home: "//minhow.com"
-  github: "//github.com/wongminho"
-  weibo: "//weibo.com/WongMinHo"
-  twitter: "//twitter.com/huangminhow"
-  #qq: "#"
-  #weixin: "#"
-  #snapchat: "#"
-  #telegram: "#"
-  #mail: "#"
-  #facebook: "#"
-  #google: "#"
-  #linkedin: "#"
+  home:
+    title: Home
+    url: //minhow.com
+    target: false
+  github:
+    title: Github
+    url: //github.com/wongminho
+    target: true
+  weibo:
+    title: Weibo
+    url: //weibo.com/WongMinHo
+    target: true
+  twitter:
+    title: Twitter
+    url: //twitter.com/huangminhow
+    target: true
+  #qq:
+  #weixin:
+  #snapchat:
+  #telegram:
+  #mail:
+  #facebook:
+  #google:
+  #linkedin:
 
 # Content
 
@@ -45,6 +61,11 @@ cover_picture: images/banner.jpg
 open_bg_particle: true
 # Open animation in homepage and head | 开启主页及头部动画
 open_animation: true
+
+# Article
+
+# Open toc | 是否开启toc
+toc: true
 
 # Style customization | 样式定制
 style:

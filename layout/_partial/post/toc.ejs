@@ -1,0 +1,18 @@
+<% if(theme.toc){ 
+    var topic = toc(post.content, {
+            class: 'post-toc',
+            list_number: false
+        })
+    if(topic) {
+    %>
+    <aside class="post-toc-pos">
+        <nav class="post-toc-wrap">
+            <h4>TOC</h4>
+            <%- toc(post.content, {
+                class: 'post-toc',
+                list_number: false
+            }) %>
+        </nav>
+    </aside>
+    <% }
+} %>

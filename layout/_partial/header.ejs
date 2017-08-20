@@ -25,9 +25,10 @@
             </div>
             <nav class="header-nav">
                 <div class="social">
-                    <% for (var i in theme.header_nav){ %>
-                        <a class="<%= i %>" target="_blank" href="<%- url_for(theme.header_nav[i]) %>" title="<%= i %>"><i class="fa fa-<%= i %> fa-2x"></i></a>
-                    <%}%>
+                    <% for (var i in theme.header_nav) { %>
+                        <a <% if(theme.header_nav[i].title){ %>title="<%= theme.header_nav[i].title %>"<% } %> <% if(theme.header_nav[i].target){ %>target="_blank"<% } %> <% if(theme.header_nav[i].url){ %>href="<%- url_for(theme.header_nav[i].url) %><% } %>">
+                            <i class="fa fa-<%= i %> fa-2x"></i></a>
+                    <% } %>
                 </div>
             </nav>
         </div>

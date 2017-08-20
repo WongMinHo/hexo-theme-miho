@@ -39,10 +39,11 @@
   font-size: 1.3em
   color: color-default
   line-height: line-height-title
-  transition: color 0.2s
+  transition: all 0.3s ease
   @extend $ellipsis
   &:hover
     color: main-color
+    padding-left: 8px
 
 .article-header .header-cate
   background: main-color
@@ -447,3 +448,104 @@ $article-share-link
     display: block
     max-width: 100%
     margin: 0 auto
+
+.post-toc-pos
+  z-index: 999
+  bottom: 500px
+  left: calc(50% - 675px)
+  position: fixed
+  .post-article
+    float: left
+    width: 80%
+    padding-right: 30px
+
+.post-toc-wrap
+  position: fixed
+  overflow-x: hidden
+  -webkit-box-shadow: 1px 2px 3px #ddd
+  box-shadow: 1px 2px 3px #ddd
+  border: 1px solid #ddd
+  border-radius: 3px
+  width: 200px
+  max-height: 400px
+  color: #444
+  &.fixed
+    top: 20px
+    bottom: 140px
+    overflow-y: auto
+  ol, ul
+    list-style: none
+    margin: 0
+  h4
+    font-size: 15px
+    font-weight: 600
+    color: #727272
+    text-align: center
+    line-height: 20px
+
+.post-toc-child
+  padding-left: 10px
+
+.post-toc
+  display: inline-block
+  padding: 0
+  font-size: 13px
+  .post-toc-item
+    position: relative
+
+.post-toc-link
+  position: relative
+  z-index: 2
+  display: block
+  padding: 3px 10px
+  line-height: 1.5rem
+  color: inherit
+  word-break: break-all
+  text-decoration: none
+  &:hover
+    opacity: .8
+    color: main-color
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    z-index: 1
+    top: 0
+    right: 0
+    width: 100%
+    height: 100%
+
+.post-copyright
+  margin: 30px 0
+  font-size: 14px
+  .content
+    margin-bottom: 1em
+    padding: 10px 0 30px 20px
+    word-break: break-all
+    color: #727272
+    background: lighten( main-color, 95%)
+    border-radius: 10px
+    p
+      font-size: 14px
+      line-height: 1rem
+  footer
+    float: right
+    a
+      position: relative
+      display: block
+      overflow: hidden
+      padding: 0 16px 0 35px
+      height: 28px
+      line-height: 28px
+      color: #727272
+      background: lighten( main-color, 95%)
+      border-radius: 14px
+      &:hover
+        text-decoration: none
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 28px
+      height: 28px
+      border-radius: 50%
