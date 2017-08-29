@@ -23,7 +23,9 @@ window.onload = function() {
     }
     //top
     $("#sidebar-top").click(function () {
-        returnTop();
+        $('body, html').animate({
+            scrollTop: 0
+        }, 500);
     })
 
     //search

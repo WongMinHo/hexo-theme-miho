@@ -1,6 +1,21 @@
 <header id="header">
     <div id="banner"></div>
     <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="<%- url_for() %>" class="left">
+                    <span class="site-title"><%= theme.header_title %></span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    <% for (var i in theme.menu) { %>
+                    <a <% if(theme.menu[i].target){ %>target="_blank"<% } %> <% if(theme.menu[i].url){ %>href="<%- url_for(theme.menu[i].url) %><% } %>">
+                        <i class="fa fa-<%= i %>"></i>
+                        <span><% if(theme.menu[i].title){ %><%= theme.menu[i].title %><% } %></span>
+                    </a>
+                    <% } %>
+                </nav>
+            </div>
+        </div>
         <div id="header-row">
             <div id="logo">
                 <a href="<%- url_for() %>">
@@ -25,8 +40,8 @@
             </div>
             <nav class="header-nav">
                 <div class="social">
-                    <% for (var i in theme.header_nav) { %>
-                        <a <% if(theme.header_nav[i].title){ %>title="<%= theme.header_nav[i].title %>"<% } %> <% if(theme.header_nav[i].target){ %>target="_blank"<% } %> <% if(theme.header_nav[i].url){ %>href="<%- url_for(theme.header_nav[i].url) %><% } %>">
+                    <% for (var i in theme.social) { %>
+                        <a <% if(theme.social[i].title){ %>title="<%= theme.social[i].title %>"<% } %> <% if(theme.social[i].target){ %>target="_blank"<% } %> <% if(theme.social[i].url){ %>href="<%- url_for(theme.social[i].url) %><% } %>">
                             <i class="fa fa-<%= i %> fa-2x"></i></a>
                     <% } %>
                 </div>

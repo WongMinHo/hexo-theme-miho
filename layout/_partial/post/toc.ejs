@@ -5,9 +5,8 @@
         })
     if(topic) {
     %>
-    <aside class="post-toc-pos">
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <h4>TOC</h4>
             <%- toc(post.content, {
                 class: 'post-toc',
                 list_number: false

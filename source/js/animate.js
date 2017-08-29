@@ -1,5 +1,5 @@
 $(function () {
-    // 首页加载效果，并且不是手机端
+    // 首页加载动画效果，并且不是手机端
     if (mihoConfig.isHome === true && document.body.clientWidth > 700) {
         // 滚动条监听使用 https://github.com/jlmakes/scrollreveal.js
         // http://daneden.github.io/animate.css/

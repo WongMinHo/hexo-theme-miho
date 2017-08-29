@@ -37,7 +37,101 @@ $logo-common
   width: logo-size
   height: logo-size
   margin:0 auto
+#header-menu
+  position: fixed
+  box-shadow: rgba(14, 14, 14, 0.26) 0px 0px 10px
+  height: 44px
+  .header-menu-container
+    max-width: 1100px
+    margin: 0 auto
+    line-height: 44px
+    .site-title
+      font-size: 20px
+      display: inline-block
+      vertical-align: top
+      font-weight: 600
+      color: white
+      line-height: 44px
+      transition: all 0.5s
+      &:hover
+        letter-spacing: 3px
+    #header-menu-nav
+      color: white
+      a
+        margin-left: 15px
+        text-decoration: none
+        i
+          color: white
+          font-size: 18px
+        span
+          color: white
+          font-size: 15px
+          letter-spacing: 1px
+          transition: all 0.5s
+          &:hover
+            letter-spacing: 2px
+.animated
+  -webkit-animation-duration: .3s
+  animation-duration: .3s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-70px)
+  }
+  100% {
+    -webkit-transform: translateY(0)
+  }
+}
 
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px)
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(0)
+  }
+  100% {
+    -webkit-transform: translateY(-70px)
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  100% {
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px)
+  }
+}
+.slide-down
+  -webkit-animation-name: slideDown
+  animation-name: slideDown
+.slide-up
+  -webkit-animation-name: slideUp
+  animation-name: slideUp
+.header-menu-pos
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 6
+  line-height: 1.7
+  background: none
+  border-width: initial
+  border-style: none
+  border-color: initial
+  border-image: initial
+  transition: background 0.5s
 #logo
   @extend $logo-common
   img
@@ -87,8 +181,35 @@ $header-text
     a
       color: #696969
       margin-right: 15px
+      transition: 0.2s ease
+      position: relative
       &:hover
         color: main-color
+        &:after
+          right: -50%
+          top: -41px
+          color: white
+          background: main-color
+          font-size: 14px
+          content: attr(title)
+          display: block
+          padding: 5px 15px
+          position: absolute
+          white-space: nowrap
+          border-radius: 2px
+          text-transform: uppercase
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
+          z-index: 10
+        &:before
+          top: -17px
+          right: 8px
+          border: solid
+          border-color: main-color transparent
+          border-width: 5px 5px 0 5px
+          content: ""
+          display: block
+          position: absolute
+          z-index: 20
 #subtitle-wrap
   margin-top: subtitle-size
 

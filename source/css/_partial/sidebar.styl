@@ -116,6 +116,24 @@ else
       position:absolute
       top: 9px
       left: 2px
+#sidebar-menu-box-categories
+  @extend $tags-style
+  display: inline-block
+  a
+    color: #fff
+    display: inline-block
+    text-decoration: none
+    font-weight: normal
+    font-size: 10px
+    height: 21px
+    line-height: 21px
+    float: left
+    padding: 0 5px 0 10px
+    position: relative
+    border-radius: 5px
+    margin: 5px 15px 5px 8px
+    &:hover
+      opacity: 0.8
 #sidebar-top
   display: none
 
@@ -173,8 +191,8 @@ else
       color: #fff
 .search-container
   position: fixed
-  left: 39%
-  top: 48%
+  left: 34.5%
+  top: 47%
   z-index: 999
   width: 380px
   max-height: 50%

@@ -80,16 +80,34 @@ header_description: 一个专注 WEB 开发的技术博客
 logo: images/logo.png
 # Link to your banner_img | 首页banner图地址
 banner_img: images/banner.jpg
-# Head navigation, use to display social information | 头部导航，用来展示社交信息
+# Menu setting | 菜单设置
+#  name:                  Font Awesome icon | Font Awesome 图标
+#    title: Home          Title | 标题
+#    url: //minhow.com    Url, absolute or relative path | 链接，绝对或相对路径
+#    target: true         Whether to jump out | 是否跳出
+menu:
+  home:
+    title: Home
+    url: /
+    target: false
+  archive:
+    title: Archives
+    url: /archives
+    target: false
+  user:
+    title: About
+    url: /
+    target: false
+# Social setting, use to display social information | 社交设置，用来展示社交信息
 #  name:                  Font Awesome icon | Font Awesome 图标
 #    title: Home          Icon title | 图标标题
 #    url: //minhow.com    Url, absolute or relative path | 链接，绝对或相对路径
 #    target: true         Whether to jump out | 是否跳出
-header_nav:
+social:
   home:
-    title: Home
+    title: MinHow
     url: //minhow.com
-    target: false
+    target: true
   github:
     title: Github
     url: //github.com/wongminho
@@ -138,9 +156,9 @@ style:
 
 # Comments | 评论
 
-# 畅言
+# 畅言，输入appid和appkey
 changyan_appid: false
-changyan_conf: false
+changyan_appkey: false
 # disqus
 disqus: false
 
@@ -198,7 +216,7 @@ This theme support both Disqus and Changyan as the third party discussion system
 ``` bash
 # 畅言
 changyan_appid: false
-changyan_conf: false
+changyan_appkey: false
 # disqus
 disqus: false
 ```

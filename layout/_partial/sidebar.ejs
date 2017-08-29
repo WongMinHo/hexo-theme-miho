@@ -2,15 +2,25 @@
     <div id="sidebar-search">
         <i class="fa fa-search"></i>
     </div>
-    <div class="sidebar-menu">
-        <i class="fa fa-bars"></i>
+    <div id="sidebar-category">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag">
+        <i class="fa fa-tags"></i>
     </div>
     <div id="sidebar-top">
         <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
     </div>
 </div>
-<div class="sidebar-menu-box">
+<div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <%- list_categories({
+                show_count: false,
+                style: 'none',
+                separator: ''
+            }) %>
+        </div>
         <div id="sidebar-menu-box-tags">
             <%- tagcloud() %>
         </div>

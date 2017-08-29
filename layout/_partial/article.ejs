@@ -55,7 +55,7 @@
 <%- partial('post/nav') %>
 <% } %>
 <% if (!index && post.comments){ %>
-    <% if (theme.changyan_appid && theme.changyan_conf){ %>
+    <% if (theme.changyan_appid && theme.changyan_appkey){ %>
         <%- partial('plugins/comments/changyan', {
             key: post.slug,
             title: post.title,
