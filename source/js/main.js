@@ -2,13 +2,14 @@
     var body = $('body, html'),
         toc = $("#post-toc"),
         headerMenu = $("#header-menu"),
-        even = ('ontouchstart' in w && /Mobile|Android|iOS|iPhone|iPad|iPod|Windows Phone|KFAPWI/i.test(navigator.userAgent)) ? 'touchstart' : 'click',
         backTop = $("#sidebar-top"),
         search = $('#sidebar-search'),
         searchWrap = $('.search-wrap'),
         tags = $("#sidebar-menu-box-tags"),
         categories = $("#sidebar-menu-box-categories"),
         sideMenuBox = $("#sidebar-menu-box"),
+        mobileHeaderMenu = $("#mobile-header-menu-nav"),
+        _mobileHeaderMenuLocked = false,
         sideMenuBoxIsOpen = true,
         clientHeight = d.documentElement.clientHeight; //获取可视区的高度
     var Blog = {
@@ -62,6 +63,16 @@
             } else {
                 toc.removeClass("post-toc-not-top");
                 toc.addClass("post-toc-top");
+            }
+        },
+        showMobileHeaderMenu: function (status) {
+            if (_mobileHeaderMenuLocked) {
+                return false;
+            }
+            if (status) {
+                mobileHeaderMenu.addClass("mobile-header-menu-nav-in");
+            } else {
+                mobileHeaderMenu.removeClass("mobile-header-menu-nav-in")
             }
         }
     };
@@ -137,9 +148,23 @@
         Blog.showBackTop(scrollTop);
         Blog.showToc(scrollTop);
     }, false);
+    //
+    $(".mobile-header-menu-button").click(function () {
+        if (_mobileHeaderMenuLocked) {
+            return false;
+        }
+        Blog.showMobileHeaderMenu(true);
+
+        _mobileHeaderMenuLocked = true;
+
+        window.setTimeout(function() {
+            _mobileHeaderMenuLocked = false;
+        }, 350);
+    })
     //body
     body.click(function () {
         Blog.showSidebarBox(false);
         sideMenuBoxIsOpen = true;
+        Blog.showMobileHeaderMenu(false);
     });
 })(window, document);

@@ -15,17 +15,16 @@
     -webkit-transform: scale(0.8)
     -o-transform: scale(0.8)
   .header-info
-    height: 50px
-    margin-top: 0
+    display: none
   #header-title
-    margin-top: 0
+    display: none
     h2
       font-size: 1em
       color: color-grey
   #header-description
     display: none
   .header-nav
-    display: none
+    margin: 0 auto
   #mobile-nav
     position: absolute
     top: 0
@@ -52,3 +51,79 @@
         margin: 0
     .article-footer .article-footer-menu .article-footer-tags
       display: none
+  .module-mobile-cmt-barrage
+    display: none
+  .sidebar
+    display: none
+  #header-menu
+    box-shadow: none
+    height: 30px
+    .header-menu-container #header-menu-nav
+      display: none
+    .header-menu-container .site-title
+      margin: 2px 0 0 8px
+      line-height: 30px
+      font-size: 16px
+    .mobile-header-menu-button
+      position: relative
+      float: right
+      padding: 5px 10px
+      margin-right: 2px
+      border-radius: 50%
+      display: block
+      color: white
+      line-height: 20px
+      &.active
+        background-color: rgba(255,255,255,.25)
+      i
+        font-size: 20px
+  .mobile-header-menu-nav
+    -webkit-transform: translateX(22em)
+    -ms-transform: translateX(22em)
+    transform: translateX(22em)
+    -moz-transition: -moz-transform 0.45s ease, visibility 0.45s
+    -webkit-transition: -webkit-transform 0.45s ease, visibility 0.45s
+    -ms-transition: -ms-transform 0.45s ease, visibility 0.45s
+    transition: transform 0.45s ease, visibility 0.45s
+    position: fixed
+    top: 0
+    right: 0
+    height: 100%
+    background: rgba(0,0,0,0.17)
+    color: #ffffff
+    cursor: default
+    z-index: 1
+    visibility: hidden
+    .title
+      line-height: 50px
+      font-size: 25px
+      font-weight: 400
+      display: block;
+      text-align: center
+      border-bottom: 1px dotted #fff
+    .mobile-header-menu-navbar
+      border: none
+      min-width: calc(100vw - 188px)
+      float: right
+      margin: 0
+      li
+        line-height: 30px
+        font-size: 18px
+        font-weight: 300
+        text-align: left
+        background: rgba(0, 204, 204, 0.3);
+        margin-top: 5px
+        a
+          color: white
+          text-decoration: none
+          display: inline-block
+          width: 100%
+        span
+          margin-left: 5px
+  .mobile-header-menu-nav-in
+    -webkit-transform: translateX(0)
+    -ms-transform: translateX(0)
+    transform: translateX(0)
+    visibility: visible
+  #mobile-header-menu-container
+    display: block

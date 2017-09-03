@@ -16,7 +16,7 @@
     <div class="article-entry <% if (is_post()) { %>post-content<% } %>" itemprop="articleBody">
       <% if (index && site.posts.length > 1) { %>
         <div class="article-img">
-            <a>
+            <a href="<%- url_for(post.path) %>" <% if (theme.open_new_link) {%> target="_blank" <% } %>>
                 <% if (post.cover_picture) { %>
                 <img src="<%- post.cover_picture %>" alt="<%- post.title %>" title="<%- post.title %>">
                 <% } else { %>
