@@ -230,11 +230,10 @@ categories: First
 tags:
     - First
     - Second
----
-MinHow-This is a summary
-<!-- more -->
 cover_picture: /images/banner.jpg
 ---
+ MinHow-This is a summary
+<!-- more -->
 ```
 
 ## Contributing
