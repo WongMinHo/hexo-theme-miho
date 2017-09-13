@@ -4,7 +4,8 @@ function initSearch() {
         searchContainer = $('#search-container'),
         searchResult = $('#search-result'),
         searchTpl = $('#search-tpl').html(),
-        JSON_DATA = window.mihoConfig.root + '/' + 'content.json?v=' + (+ new Date()),
+        // JSON_DATA = window.mihoConfig.root + '/' + 'content.json?v=' + (+ new Date()),
+        JSON_DATA ='/content.json?v=' + (+ new Date()),
         searchData;
 
     function loadData(success) {
@@ -13,7 +14,7 @@ function initSearch() {
             xhr.open('GET', JSON_DATA, true);
             xhr.onload = function () {
                 if (this.status >= 200 && this.status < 300) {
-                    var res = JSON.parse(this.response);
+                    var res = JSON.parse(this.response||this.responseText);
                     searchData = res instanceof Array ? res : res.posts;
                     success(searchData);
                 } else {
