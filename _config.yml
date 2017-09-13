@@ -32,7 +32,7 @@ menu:
     target: false
   user:
     title: About
-    url: /
+    url: /about
     target: false
 # Social setting, use to display social information | 社交设置，用来展示社交信息
 #  name:                  Font Awesome icon | Font Awesome 图标
@@ -84,6 +84,8 @@ open_animation: true
 
 # Open toc | 是否开启toc
 toc: true
+# Open share | 是否开启分享
+share: true
 
 # Style customization | 样式定制
 style:
@@ -95,6 +97,8 @@ style:
 # 畅言，输入appid和appkey
 changyan_appid: false
 changyan_appkey: false
+# 友言，输入id
+youyan_id: false
 # disqus
 disqus: false
 

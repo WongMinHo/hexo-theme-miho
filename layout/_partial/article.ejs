@@ -18,9 +18,9 @@
         <div class="article-img">
             <a href="<%- url_for(post.path) %>" <% if (theme.open_new_link) {%> target="_blank" <% } %>>
                 <% if (post.cover_picture) { %>
-                <img src="<%- post.cover_picture %>" alt="<%- post.title %>" title="<%- post.title %>">
+                <img src="<%- (/^(http:|https:)?\/\//.test(post.cover_picture) ? post.cover_picture : config.url.replace(/\/$/, '') + '/' + post.cover_picture)%>" alt="<%- post.title %>" title="<%- post.title %>">
                 <% } else { %>
-                <img src="<%- theme.cover_picture %>" alt="<%- post.title %>" title="<%- post.title %>">
+                <img src="<%- (/^(http:|https:)?\/\//.test(theme.cover_picture) ? theme.cover_picture : config.url.replace(/\/$/, '') + '/' + theme.cover_picture) %>" alt="<%- post.title %>" title="<%- post.title %>">
                 <% } %>
             </a>
         </div>
@@ -38,6 +38,9 @@
       <% } %>
     </div>
     <footer class="article-footer">
+        <% if (!index && theme.share){ %>
+        <%- partial('post/share') %>
+        <% } %>
         <ul class="article-footer-menu">
             <% if (index) { %>
                 <li><i class="fa fa-calendar"></i><%= date(post.date) %></li>
@@ -61,6 +64,8 @@
             title: post.title,
             url: config.url+url_for(post.path)
         }) %>
+    <% } else if (theme.youyan_id) { %>
+        <%- partial('plugins/comments/youyan') %>
     <% } else if (theme.disqus || config.disqus_shortname) { %>
         <section id="comments">
             <div id="disqus_thread">

@@ -1,67 +1,80 @@
-![MiHo](http://oerolc7og.bkt.clouddn.com/images/miho/theme/github.jpg)
-hexo-theme-miho
-================
+---
+title: MiHo-主题安装和配置详情
+date: 2017-08-01
+categories: 开源项目
+author: MinHow
+tags:
+    - 博客
+    - 开源项目
+cover_picture: http://oerolc7og.bkt.clouddn.com/images/miho/theme/github-second.jpg
+top: 1
+---
+![miho](http://oerolc7og.bkt.clouddn.com/images/miho/theme/github.jpg)
 
-MiHo is a single and responsive design theme for [Hexo](//hexo.io).
-MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[MinHow's Blog](http://blog.minhow.com/).
-中文文档请[查看](http://blog.minhow.com/2017/08/01/blog/installation-configuration/).
-
-## Summary
-* [General](#general)
-* [Features](#features)
-* [Installation](#installation)
-* [Configuration](#configuration)
-* [Contributing](#contributing)
-* [License](#license)
-
-## General
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg?style=flat-square)](#)
-[![Author](https://img.shields.io/badge/author-MinHow-blue.svg?style=flat-square)](https://minhow.com)
-
-[![Hexo](https://img.shields.io/badge/hexo-3.0+-green.svg?style=flat-square)](https://hexo.io)
-[![node.js](https://img.shields.io/badge/node.js-6.0+-green.svg?style=flat-square)](https://nodejs.org/)
-
-## Features
-* Responsive
-* Concise
-* Tags Support & Categories Support
-* Googe analytics & Baidu analytics & Cnzz analytics
-* Disqus comments & Changyan comments
-* Stylus CSS preprocessor
-* Local Site Search
-* Pagination
-* ejs HTML templates
-
-## Installation
-
-### Installation Theme
+### 一. 主题简介
+&emsp;&emsp;MiHo 是一款单栏响应式的[Hexo](https://hexo.io)主题；基于 Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在[GitHub](https://github.com/WongMinHo/hexo-theme-miho)上，
+欢迎Star和Fork；如遇到问题或发表建议，可以提[Issues](https://github.com/WongMinHo/hexo-theme-miho/issues)，也可以在博客中留言给我，另外,喜欢的话不妨给个 Star。
+### 二. 安装
+#### 2.1 安装主题
 ``` bash
 $ git clone https://github.com/WongMinHo/hexo-theme-miho.git themes/miho
 ```
-
-### Update
+MiHo 主题需要Hexo 3.0或以上版本，请先升级。
+#### 2.2 更新
 ``` bash
 cd themes/miho
 git pull
 ```
-
-### Dependency installation
-#### Json-content
-Generate site articles static data for in-site search; detailed configuration please check [hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content).
+#### 2.3 依赖安装
+如下依赖如果已经安装，请看配置介绍。
+##### Json-content
+生成站点文章静态数据，用于站内搜索。
 ``` bash
 npm install hexo-generator-json-content --save
 ```
-
-### Theme Config
-Change theme field in Hexo root's `_config.yml` file.
+### 三. 站点配置
+站点配置文件`_config.yml`在hexo根目录下。
+#### 3.1 启用主题
 ``` bash
-theme: miho
+`theme: miho`
 ```
-
-## Configuration
-Modify settings in `themes/miho/_config.yml`，Please use it as needed.
-
+#### 3.2 网站基本配置
+以下配置是站点的全局配置，更多配置，请[查看](https://hexo.io/zh-cn/docs/configuration.html)
+``` bash
+title: MinHow's Blog
+subtitle: 网站副标题
+description: 专注 WEB 开发的技术博客
+author: MinHow
+language: 网站使用的语言
+timezone: 网站时区
 ```
+#### 3.3 jsonContent配置
+详细的配置请查看[hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content)
+``` bash
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: false
+```
+###  四. 主题配置
+编辑主题配置文件，`themes/miho/_config.yml`。
+#### 4.1 属性
+下面将介绍几个比较重要的配置。
+``` bash
 # hexo-theme-miho
 # https://github.com/wongminho/hexo-theme-miho
 
@@ -185,38 +198,24 @@ access_counter:
 # Copyright Information | 版权信息
 copyright: 2017 MinHow
 ```
-
-#### Article cover picture
-Article default cover picture，size：350*150, When the article configuration does not have cover_picture display.
+####  4.2 文章封面图
+文章默认封面图，尺寸：350*150，当文章基本配置没有`cover_picture`时才显示。
 ``` bash
 cover_picture: images/banner.jpg
 ```
-
-#### Background particles
-Whether to open background particles.
+####  4.3 开启背景粒子
+是否开启背景粒子。
 ``` bash
 open_bg_particle: true
 ```
-
-#### Homepage and head animation
-Whether to open homepage and head animation.
-``` bash
+####  4.4 开启主页及头部动画
+是否开启主页及头部动画。
+```
 open_animation: true
 ```
 
-#### Analytics
-Google analytics, Baidu analytics and cnzz analytics are supported.
-``` bash
-# 站长分析，输入站点id
-cnzz_analytics: false
-# 百度分析，输入key值
-baidu_analytics: false
-# google analytics | google分析
-google_analytics: false
-```
-
-#### Comments
-This theme support both Disqus and Changyan as the third party discussion system.
+####  4.5 评论
+支持畅言、disqus。
 ``` bash
 # 畅言，输入appid和appkey
 changyan_appid: false
@@ -226,13 +225,24 @@ youyan_id: false
 # disqus
 disqus: false
 ```
+####  4.6 数据统计
+支持站长、百度、google三种数据统计，正确填写配置信息即可。
+``` bash
+# 站长分析，输入站点id
+cnzz_analytics: false
+# 百度分析，输入key值
+baidu_analytics: false
+# google分析
+google_analytics: false
+```
 
-### Article configuration example
+####  4.7 文章基本配置
 ``` bash
 ---
 title: Hello World
 date: 2017-06-18
 categories: First
+author: MinHow
 tags:
     - First
     - Second
@@ -242,10 +252,6 @@ cover_picture: /images/banner.jpg
 <!-- more -->
 ```
 
-## Contributing
-All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.
-
-## License
-Open sourced under the GPL v3.0 license.
-
-
+说明：
+*   需要注意`tags`和摘要的写法，不然首页不能正确显示标签和摘要；
+*  `cover_picture`文章封面图，不填默认显示`_config.yml`配置的图片。

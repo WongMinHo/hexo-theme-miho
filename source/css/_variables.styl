@@ -50,6 +50,7 @@ article-padding = 15px
 mobile-nav-width = 280px
 main-column = 9
 sidebar-column = 3
+box-shadow = 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12)
 
 if sidebar and sidebar isnt bottom
   _sidebar-column = sidebar-column
@@ -65,3 +66,13 @@ columns = main-column + _sidebar-column
 mq-mobile = "screen and (max-width: 760px)"
 mq-tablet = "screen and (min-width: 480px) and (max-width: 767px)"
 mq-normal = "screen and (min-width: 768px)"
+
+//Functions
+boxShadow(s)
+  box-shadow: box-shadow
+  transition(s)
+  &:hover, &:active
+   box-shadow: 0 6px 12px rgba(0, 0, 0, .2)
+transition(s, dur = ease-in-out)
+  -webkit-transition: s dur
+  transition: s dur

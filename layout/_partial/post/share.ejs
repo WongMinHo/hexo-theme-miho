@@ -1,0 +1,54 @@
+<%
+    var shareUrl = url.replace(/index\.html$/, '')
+    var shareTitle = page.title ? '《'+ page.title +'》 — ' + config.title : config.title
+    var shareDesc = truncate(strip_html(page.excerpt || config.description), { length: 80})
+    var sharePic = post.cover_picture ? post.cover_picture
+        : (/^(http:|https:)?\/\//.test(theme.logo) ? theme.logo
+            : config.url.replace(/\/$/, '') + theme.logo)
+%>
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=<%-shareUrl%>&title=<%-shareTitle%>&pic=<%-sharePic%>" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=<%-shareUrl%>&title=<%-shareTitle%>&source=<%-shareDesc%>" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%-shareUrl%>" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=<%-shareTitle%>&url=<%-shareUrl%>&via=<%-config.url%>" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=<%-shareUrl%>" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="<%- 'qrcode' in locals ? qrcode(shareUrl) : '//api.qrserver.com/v1/create-qr-code/?data=' + shareUrl  %>" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
