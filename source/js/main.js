@@ -6,6 +6,7 @@
         search = $('#sidebar-search'),
         searchWrap = $('.search-wrap'),
         tags = $("#sidebar-menu-box-tags"),
+        mobileTags = $("#mobile-header-container-tags"),
         categories = $("#sidebar-menu-box-categories"),
         sideMenuBox = $("#sidebar-menu-box"),
         mobileHeaderMenu = $("#mobile-header-menu-nav"),
@@ -25,7 +26,7 @@
         showBackTop: function (scrollTop) {
             backTop.css('display', (scrollTop > clientHeight) ? "block" : "none");
         },
-        setTags: function () {
+        setTags: function (tags) {
             var labels = tags.find("a");
             labels.css({"font-size" : "15px"});
             for(var i = 0, len = labels.length; i < len; i++){
@@ -126,7 +127,8 @@
     });
 
     //tags | 标签
-    Blog.setTags();
+    Blog.setTags(tags);//pc
+    Blog.setTags(mobileTags);//mobile
     //categories | 类别
     Blog.setCategories();
     //类别展示

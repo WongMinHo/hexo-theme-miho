@@ -94,30 +94,31 @@
     cursor: default
     z-index: 1
     visibility: hidden
+    border: none
+    width: 80%
+    float: right
+    margin: 0
     .title
       line-height: 50px
       font-size: 25px
       font-weight: 400
       display: block;
       text-align: center
-      border-bottom: 1px dotted #fff
+      border-bottom: 1px solid #fff
     .mobile-header-menu-navbar
-      border: none
-      min-width: calc(100vw - 188px)
-      float: right
-      margin: 0
       li
         line-height: 30px
         font-size: 18px
         font-weight: 300
         text-align: left
-        background: rgba(0, 204, 204, 0.3);
+        border-bottom: 1px dotted #fff
         margin-top: 5px
         a
           color: white
           text-decoration: none
           display: inline-block
           width: 100%
+          padding-left: 5px
         span
           margin-left: 5px
   .mobile-header-menu-nav-in
@@ -125,7 +126,44 @@
     -ms-transform: translateX(0)
     transform: translateX(0)
     visibility: visible
-  #mobile-header-menu-container
-    display: block
+  .mobile-header-tag-container
+    #mobile-header-container-tags
+      @extend $tags-style
+      padding-left: 5px
+      max-height: 100%
+      overflow-y: auto
+      a
+        color: #fff
+        display: inline-block
+        text-decoration: none
+        font-weight: normal
+        font-size: 12px
+        height: 18px
+        line-height: 18px
+        float: left
+        padding: 0 5px 0 10px
+        position: relative
+        border-radius: 0 5px 5px 0
+        margin: 5px 9px 5px 8px
+        &:hover
+          opacity: 0.8
+        &:before
+          content: " "
+          width: 0
+          height: 0
+          position: absolute
+          top: 0
+          left: -18px
+          border: 9px solid transparent
+        &:after
+          content:" "
+          width:4px
+          height:4px
+          background-color:#fff
+          border-radius:4px
+          box-shadow:0px 0px 0px 1px rgba(0,0,0,.3)
+          position:absolute
+          top: 7px
+          left: 2px
   .outer
     padding: 0

@@ -1,5 +1,20 @@
-<nav id="mobile-nav">
-  <% for (var i in theme.menu){ %>
-    <a href="<%- url_for(theme.menu[i]) %>" class="mobile-nav-link"><%= i %></a>
-  <% } %>
-</nav>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            <% for (var i in theme.menu) { %>
+            <li>
+                <a <% if(theme.menu[i].target){ %>target="_blank"<% } %> <% if(theme.menu[i].url){ %>href="<%- url_for(theme.menu[i].url) %><% } %>">
+                    <i class="fa fa-<%= i %>"></i><span><% if(theme.menu[i].title){ %><%= theme.menu[i].title %><% } %></span>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <%- tagcloud() %>
+        </div>
+    </div>
+</div>
