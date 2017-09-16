@@ -124,7 +124,7 @@ social:
   #weixin:
   #snapchat:
   #telegram:
-  #mail:
+  #envelope-o:
   #facebook:
   #google:
   #linkedin:

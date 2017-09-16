@@ -27,18 +27,5 @@
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
 </div>
-<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
-    <div id="mobile-header-menu-container">
-        <span class="title">Menu</span>
-        <ul class="mobile-header-menu-navbar">
-            <% for (var i in theme.menu) { %>
-            <li>
-                <a <% if(theme.menu[i].target){ %>target="_blank"<% } %> <% if(theme.menu[i].url){ %>href="<%- url_for(theme.menu[i].url) %><% } %>">
-                    <i class="fa fa-<%= i %>"></i><span><% if(theme.menu[i].title){ %><%= theme.menu[i].title %><% } %></span>
-                </a>
-            </li>
-            <% } %>
-        </ul>
-    </div>
-</div>
+<%- partial('_partial/mobile-nav') %>
 <%- partial('_partial/search') %>
