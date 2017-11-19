@@ -1,0 +1,35 @@
+<% if (theme.reward.status === 1 || (theme.reward.status === 2 && post.reward)) { %>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <%=theme.reward.title %>
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        <%
+            var wechat = theme.reward.wechat;
+            var alipay = theme.reward.alipay;
+        %>
+        <div class="reward-code">
+            <img id="rewardCode" src="<%- url_for(wechat) %>" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            <% if(wechat) {%>
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="<%- url_for(wechat) %>">
+                <img class="reward-select-item-wechat" src="<%- url_for('images/wechat.png') %>" alt="微信">
+            </label>
+            <% } %>
+            <% if(alipay) {%>
+            <label class="reward-select-item" data-id="alipay" data-alipay="<%- url_for(alipay) %>">
+                <img class="reward-select-item-alipay" src="<%- url_for('images/alipay.png') %>" alt="支付宝">
+            </label>
+            <% } %>
+        </div>
+    </div>
+</div>
+<% } %>

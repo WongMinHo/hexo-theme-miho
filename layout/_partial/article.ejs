@@ -36,6 +36,9 @@
             <%- post.content %>
             <%- partial('post/copyright') %>
       <% } %>
+        <% if (! index){ %>
+            <%- partial('post/reward') %>
+        <% } %>
     </div>
     <footer class="article-footer">
         <% if (!index && theme.share){ %>

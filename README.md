@@ -156,6 +156,19 @@ style:
   # Main color tone | 主色调
   main_color: '#0cc'
 
+# Reward | 打赏
+
+reward:
+  # 0-close, 1-All articles are rewarding, 2-Article's md file has reward:true attribute, only reward
+  # 0-关闭, 1-所有文章均有打赏, 2-文章的md文件里有reward:true属性，才有打赏
+  status: 1
+  # 标题
+  title: 多少都行~
+  # 微信，关闭设为 false
+  wechat: images/wechat_code.jpg
+  # 支付宝，关闭设为 false
+  alipay: images/alipay_code.jpg
+
 # Comments | 评论
 
 # 畅言，输入appid和appkey
