@@ -12,7 +12,6 @@
 <%- partial('_partial/sidebar') %>
 <%- js('js/search') %>
 <%- js('js/main') %>
-<%- js('js/pop-img') %>
 
 <% if (theme.open_bg_particle){ %>
   <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
@@ -46,8 +45,9 @@
   <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
   <%- js('js/animate') %>
 <% } %>
-<script>
-    if (! mihoConfig.isHome) {
-        $(".article-entry img").popImg();
-    }
-</script>
+<% if (! is_home()){ %>
+  <%- js('js/pop-img') %>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+<% } %>

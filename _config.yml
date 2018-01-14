@@ -99,7 +99,7 @@ reward:
   # 0-关闭, 1-所有文章均有打赏, 2-文章的md文件里有reward:true属性，才有打赏
   status: 1
   # 标题
-  title: 多少都行~
+  title: 请我吃糖~
   # 微信，关闭设为 false
   wechat: images/wechat_code.jpg
   # 支付宝，关闭设为 false
