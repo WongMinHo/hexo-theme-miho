@@ -69,6 +69,8 @@
         }) %>
     <% } else if (theme.youyan_id) { %>
         <%- partial('plugins/comments/youyan') %>
+    <% } else if (theme.gitment.owner) { %>
+    <%- partial('plugins/comments/gitment') %>
     <% } else if (theme.disqus || config.disqus_shortname) { %>
         <section id="comments">
             <div id="disqus_thread">

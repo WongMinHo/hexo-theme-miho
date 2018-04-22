@@ -69,7 +69,7 @@ function initSearch() {
         loadData(function (items) {
             var results = [];
             items.forEach( function(item) {
-                if (item.title.toLowerCase().indexOf(keywords) > -1) {
+                if (item.title.toLowerCase().indexOf(keywords) > -1 || item.text.toLowerCase().indexOf(keywords) > -1) {
                     results.push(item);
                 }
             });

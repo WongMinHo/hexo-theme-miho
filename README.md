@@ -178,6 +178,12 @@ changyan_appkey: false
 youyan_id: false
 # disqus
 disqus: false
+# gitment  https://github.com/imsun/gitment
+gitment:
+  owner: false   #你的 GitHub ID
+  repo: ''   #存储评论的 repo
+  client_id: '' #client ID
+  client_secret: ''  #client secret
 
 # Analytics | 分析
 # 站长分析，输入站点id
