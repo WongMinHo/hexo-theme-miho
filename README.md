@@ -1,10 +1,10 @@
-![MiHo](http://oerolc7og.bkt.clouddn.com/images/miho/theme/github.jpg)
+![MiHo](http://cloud.minhow.com/images/miho/theme/github.jpg)
 hexo-theme-miho
 ================
 
 MiHo is a single and responsive design theme for [Hexo](//hexo.io).
-MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[MinHow's Blog](http://blog.minhow.com/).
-中文文档请[查看](http://blog.minhow.com/2017/08/01/blog/installation-configuration/).
+MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[MinHow's Blog](https://blog.minhow.com/).
+中文文档请[查看](https://blog.minhow.com/2017/08/01/blog/installation-configuration/).
 
 ## Summary
 * [General](#general)
