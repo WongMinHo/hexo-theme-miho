@@ -4,7 +4,7 @@ hexo-theme-miho
 
 MiHo is a single and responsive design theme for [Hexo](//hexo.io).
 MiHo requires Hexo 3.0 and above, Compatible with mobile browsing; Theme DEMO:[MinHow's Blog](https://blog.minhow.com/).
-中文文档请[查看](https://blog.minhow.com/2017/08/01/blog/installation-configuration/).
+中文文档请[查看](https://blog.minhow.com/articles/blog/installation-configuration/).
 
 ## Summary
 * [General](#general)
